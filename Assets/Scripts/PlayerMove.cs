@@ -28,5 +28,9 @@ public class PlayerMove : MonoBehaviour
         {
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         }
+        if (Input.GetKey("space") && CheckGround.isGrounded)
+        {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+        }
     }
 }
