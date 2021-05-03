@@ -59,6 +59,9 @@
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\CheckGround.cs" />
     <Compile Include="Assets\Scripts\CoinCollected.cs" />
+    <Compile Include="Assets\Scripts\DamageObject.cs" />
+    <Compile Include="Assets\Scripts\EnemyRockySpike.cs" />
+    <Compile Include="Assets\Scripts\CoinManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

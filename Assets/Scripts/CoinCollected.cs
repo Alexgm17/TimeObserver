@@ -11,6 +11,9 @@ public class CoinCollected : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().enabled = false;
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+
+            FindObjectOfType<CoinManager>().AllCoinsCollected();
+
             Destroy(gameObject,0.5f);
         }
     }
