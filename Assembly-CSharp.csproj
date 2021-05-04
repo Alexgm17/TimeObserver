@@ -57,11 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\CheckGround.cs" />
-    <Compile Include="Assets\Scripts\CoinCollected.cs" />
     <Compile Include="Assets\Scripts\DamageObject.cs" />
-    <Compile Include="Assets\Scripts\EnemyRockySpike.cs" />
+    <Compile Include="Assets\Scripts\Enemies\IABasic.cs" />
     <Compile Include="Assets\Scripts\CoinManager.cs" />
+    <Compile Include="Assets\Scripts\CheckGround.cs" />
+    <Compile Include="Assets\Scripts\EnemyRockySpike.cs" />
+    <Compile Include="Assets\Scripts\CoinCollected.cs" />
+    <Compile Include="Assets\Scripts\Enemies\JumpDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
