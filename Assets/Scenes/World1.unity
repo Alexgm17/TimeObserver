@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 34322557}
   - component: {fileID: 34322559}
   - component: {fileID: 34322558}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45013,6 +45013,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &752576550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7774659306870960389, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
+  m_PrefabInstance: {fileID: 7774659308460959278}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &768389635
 GameObject:
   m_ObjectHideFlags: 0
@@ -50602,7 +50607,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1234393737}
-  - component: {fileID: 1234393736}
   - component: {fileID: 1234393738}
   m_Layer: 0
   m_Name: Background
@@ -50611,18 +50615,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1234393736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234393735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e79d97c9c06064c8bda4e1eb7d9b08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1234393737
 Transform:
   m_ObjectHideFlags: 0
@@ -60722,13 +60714,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7774659306870960386, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
-      propertyPath: m_Size.y
-      value: 0.003693968
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774659306870960386, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.16037391
+    - target: {fileID: 7774659306870960389, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 7774659308092546734, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
       propertyPath: m_LocalScale.y
@@ -60748,7 +60736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7774659308463092944, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17
+      value: 0.149
       objectReference: {fileID: 0}
     - target: {fileID: 7774659308463092944, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -60785,6 +60773,18 @@ PrefabInstance:
     - target: {fileID: 7774659308463092949, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
       propertyPath: m_Name
       value: Scientist
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774659308463093039, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
+      propertyPath: checkGround
+      value: 
+      objectReference: {fileID: 752576550}
+    - target: {fileID: 7774659308463093039, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
+      propertyPath: checkGroundRadio
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774659308463093039, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}
+      propertyPath: floorChecker.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586ff4761c598ae4d871da4cef866b9c, type: 3}

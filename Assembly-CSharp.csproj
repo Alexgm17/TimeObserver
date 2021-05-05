@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BBF00A01-71B0-3235-E59B-D46143D57976}</ProjectGuid>
+    <ProjectGuid>{127721DB-48CD-9E58-D242-6FDE96A66738}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,7 +60,6 @@
     <Compile Include="Assets\Scripts\DamageObject.cs" />
     <Compile Include="Assets\Scripts\Enemies\IABasic.cs" />
     <Compile Include="Assets\Scripts\CoinManager.cs" />
-    <Compile Include="Assets\Scripts\CheckGround.cs" />
     <Compile Include="Assets\Scripts\EnemyRockySpike.cs" />
     <Compile Include="Assets\Scripts\CoinCollected.cs" />
     <Compile Include="Assets\Scripts\Enemies\JumpDamage.cs" />

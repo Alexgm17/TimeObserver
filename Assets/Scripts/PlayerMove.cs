@@ -21,6 +21,14 @@ public class PlayerMove : MonoBehaviour
 
     public Animator animator;
 
+    public Transform checkGround;
+
+    public float checkGroundRadio;
+
+    public bool touchingFloor;
+
+    public LayerMask floorChecker;
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -45,17 +53,19 @@ public class PlayerMove : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
             animator.SetBool("Run", false);
         }
-        if (Input.GetKey("space") && CheckGround.isGrounded)
+        if (Input.GetKey("space") && touchingFloor==true)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
         }
 
-        if (CheckGround.isGrounded==false)
+        touchingFloor = Physics2D.OverlapCircle(checkGround.position, checkGroundRadio, floorChecker);
+
+        if (touchingFloor==false)
         {
             animator.SetBool("Jump", true);
             animator.SetBool("Run", false);
         }
-        if (CheckGround.isGrounded==true)
+        if (touchingFloor==true)
         {
             animator.SetBool("Jump", false);
         }
