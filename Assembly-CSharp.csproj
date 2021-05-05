@@ -63,6 +63,8 @@
     <Compile Include="Assets\Scripts\EnemyRockySpike.cs" />
     <Compile Include="Assets\Scripts\CoinCollected.cs" />
     <Compile Include="Assets\Scripts\Enemies\JumpDamage.cs" />
+    <Compile Include="Assets\Scripts\PlayerRespawn.cs" />
+    <Compile Include="Assets\Scripts\EndLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

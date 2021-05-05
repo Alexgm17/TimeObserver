@@ -36,13 +36,13 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey("d") || Input.GetKey("right"))
+        if ((Input.GetKey("d") || Input.GetKey("right")) && EndLevel.playerEndLevel==false)
         {
             rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
             spriteRenderer.flipX = false;
             animator.SetBool("Run", true);
         }
-        else if (Input.GetKey("a") || Input.GetKey("left"))
+        else if ((Input.GetKey("a") || Input.GetKey("left")) && EndLevel.playerEndLevel==false)
         {
             rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
             spriteRenderer.flipX = true;
@@ -53,7 +53,7 @@ public class PlayerMove : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
             animator.SetBool("Run", false);
         }
-        if (Input.GetKey("space") && touchingFloor==true)
+        if (Input.GetKey("space") && touchingFloor==true && EndLevel.playerEndLevel==false)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
         }
