@@ -13,6 +13,8 @@ public class PlayerRespawn : MonoBehaviour
 
     public Animator animator;
 
+    private float timeInmunity;
+
     private void Start()
     {
         life = hearts.Length;
@@ -51,7 +53,16 @@ public class PlayerRespawn : MonoBehaviour
 
     public void PlayerDamaged()
     {
-        life--;
-        CheckLife();
+        if (timeInmunity >= 1.5)
+        {
+            life--;
+            timeInmunity = 0;
+            CheckLife();
+        }
+    }
+
+    public void Update()
+    {
+        timeInmunity += Time.deltaTime;
     }
 }

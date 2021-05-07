@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7774659306870960388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7774659308463092944}
@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7774659308092546642}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.625}
+  m_LocalPosition: {x: 0, y: 0.4, z: -0.625}
   m_LocalScale: {x: 1, y: 1, z: 0.0625}
   m_Children: []
   m_Father: {fileID: 7774659308463092944}
@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 7774659308463093038}
   - component: {fileID: 7774659308463092945}
   - component: {fileID: 7774659308463093039}
+  - component: {fileID: 7774659308460959280}
   m_Layer: 0
   m_Name: Scientist
   m_TagString: Player
@@ -233,7 +234,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010548383, y: -0.04925853}
+  m_Offset: {x: 0.00856936, y: -0.04323274}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -244,7 +245,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.120734274, y: 0.21234119}
+  m_Size: {x: 0.11677623, y: 0.2002896}
   m_EdgeRadius: 0
 --- !u!50 &7774659308463092945
 Rigidbody2D:
@@ -285,4 +286,27 @@ MonoBehaviour:
   fallMultiplayer: 0.5
   lowJumpMultiplayer: 1
   spriteRenderer: {fileID: 7774659308463092947}
+  animator: {fileID: 7774659308463092946}
+  checkGround: {fileID: 7774659306870960389}
+  checkGroundRadio: 0.03
+  touchingFloor: 0
+  floorChecker:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &7774659308460959280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7774659308463092949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8bc275d1bd99f84ebf67656ee87c533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   animator: {fileID: 7774659308463092946}
