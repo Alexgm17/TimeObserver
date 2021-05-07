@@ -17,7 +17,9 @@ public class EndLevel : MonoBehaviour
         {
             levelFinished.gameObject.SetActive(true);
             playerEndLevel = true;
+            CoinManager.levelCoinsCount = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            playerEndLevel = false;
         }
     }
 

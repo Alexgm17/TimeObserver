@@ -31,6 +31,8 @@ public class PlayerRespawn : MonoBehaviour
         {
             hearts[0].gameObject.SetActive(false);
             animator.Play("Hit");
+            CoinManager.globalCoinsCount -= CoinManager.levelCoinsCount;
+            CoinManager.levelCoinsCount = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else if (life < 2)
@@ -53,7 +55,7 @@ public class PlayerRespawn : MonoBehaviour
 
     public void PlayerDamaged()
     {
-        if (timeInmunity >= 1.5)
+        if (timeInmunity >= 1)
         {
             life--;
             timeInmunity = 0;
