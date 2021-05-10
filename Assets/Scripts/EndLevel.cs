@@ -21,7 +21,7 @@ public class EndLevel : MonoBehaviour
             playerEndLevel = true;
             CoinManager.levelCoinsCount = 0;
             transition.SetActive(true);
-            Invoke("ChangeScene", 0.46f);
+            Invoke("ChangeScene", 1f);
             playerEndLevel = false;
         }
     }
