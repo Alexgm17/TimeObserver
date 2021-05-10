@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 7774659308463092945}
   - component: {fileID: 7774659308463093039}
   - component: {fileID: 7774659308460959280}
+  - component: {fileID: 1731772305075716777}
   m_Layer: 0
   m_Name: Scientist
   m_TagString: Player
@@ -275,7 +276,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7774659308463092949}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b0f2a00feaef4e409d43d39b466ca35, type: 3}
   m_Name: 
@@ -310,3 +311,30 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   animator: {fileID: 7774659308463092946}
+--- !u!114 &1731772305075716777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7774659308463092949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937310cfbdb22424186a8d9778bfbc0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
+  runSpeedHorizontal: 2
+  runSpeed: 2
+  jumpSpeed: 3
+  betterJump: 0
+  fallMultiplayer: 0.5
+  lowJumpMultiplayer: 1
+  spriteRenderer: {fileID: 7774659308463092947}
+  animator: {fileID: 7774659308463092946}
+  checkGround: {fileID: 7774659306870960389}
+  checkGroundRadio: 0
+  touchingFloor: 0
+  floorChecker:
+    serializedVersion: 2
+    m_Bits: 0
