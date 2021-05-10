@@ -9,9 +9,16 @@ public class EndLevel : MonoBehaviour
 
     public Text levelFinished;
 
+    public GameObject buttonOptions;
+
+    public GameObject hearts;
+
+    public GameObject coinsCount;
+
     public GameObject transition;
 
     public static bool playerEndLevel = false;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,9 +27,7 @@ public class EndLevel : MonoBehaviour
             levelFinished.gameObject.SetActive(true);
             playerEndLevel = true;
             CoinManager.levelCoinsCount = 0;
-            transition.SetActive(true);
-            Invoke("ChangeScene", 1f);
-            playerEndLevel = false;
+            StartCoroutine(LevelEndTransition());
         }
     }
 
@@ -34,5 +39,19 @@ public class EndLevel : MonoBehaviour
     void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        buttonOptions.gameObject.SetActive(true);
+        hearts.gameObject.SetActive(true);
+        coinsCount.gameObject.SetActive(true);
+    }
+
+    IEnumerator LevelEndTransition()
+    {
+        yield return new WaitForSeconds(1.5f);
+        buttonOptions.gameObject.SetActive(false);
+        hearts.gameObject.SetActive(false);
+        coinsCount.gameObject.SetActive(false);
+        levelFinished.gameObject.SetActive(false);
+        transition.SetActive(true);
+        Invoke("ChangeScene", 1f);
     }
 }
