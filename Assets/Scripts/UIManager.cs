@@ -2,36 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject optionsPanel;
+    public AudioSource clip;
 
-    public bool optionsPanelActive = false;
+    public GameObject optionsPanel;
 
     public void Update()
     {
-        if (Input.GetKeyDown("escape") && optionsPanelActive == false)
+        if (Input.GetKeyDown("escape") && optionsPanel.activeSelf == false)
         {
             OptionsPanel();
+            PlaySoundButton();
         }
-        else if (Input.GetKeyDown("escape") && optionsPanelActive == true)
+        else if (Input.GetKeyDown("escape") && optionsPanel.activeSelf == true)
         {
             Return();
+            PlaySoundButton();
         }
     }
 
     public void OptionsPanel()
     {
         Time.timeScale = 0;
-        optionsPanelActive = true;
         optionsPanel.SetActive(true);
     }
 
     public void Return()
     {
         Time.timeScale = 1;
-        optionsPanelActive = false;
         optionsPanel.SetActive(false);
     }
 
@@ -50,5 +51,10 @@ public class UIManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();    
+    }
+
+    public void PlaySoundButton()
+    {
+        clip.Play();
     }
 }

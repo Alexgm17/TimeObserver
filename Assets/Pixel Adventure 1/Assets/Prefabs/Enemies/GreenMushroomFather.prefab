@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9680d454492b31489042babdd320a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 0}
   collider2D: {fileID: 8286701642215836794}
   animator: {fileID: 8286701642215836792}
   spriteRenderer: {fileID: 8286701642215836793}

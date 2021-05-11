@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PlayerRespawn : MonoBehaviour
 {
+    public AudioSource clip;
 
     public GameObject[] hearts;
+
     private int life;
 
     private float checkPositionX, checkPositionY;
@@ -37,11 +40,13 @@ public class PlayerRespawn : MonoBehaviour
         }
         else if (life < 2)
         {
+            clip.Play();
             hearts[1].gameObject.SetActive(false);
             animator.Play("Hit");
         }
         else if (life < 3)
         {
+            clip.Play();
             hearts[2].gameObject.SetActive(false);
             animator.Play("Hit");
         }
