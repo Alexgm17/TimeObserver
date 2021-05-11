@@ -34,6 +34,36 @@ public class PlayerMove : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKey("space") && touchingFloor == true && EndLevel.playerEndLevel == false)
+        {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+        }
+
+        touchingFloor = Physics2D.OverlapCircle(checkGround.position, checkGroundRadio, floorChecker);
+
+        if (touchingFloor == false)
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("Run", false);
+        }
+        if (touchingFloor == true)
+        {
+            animator.SetBool("Jump", false);
+            animator.SetBool("Falling", false);
+        }
+
+        if (rb2D.velocity.y < 0 && touchingFloor == false)
+        {
+            animator.SetBool("Falling", true);
+        }
+        else if (rb2D.velocity.y >= 0)
+        {
+            animator.SetBool("Falling", false);
+        }
+    }
+
     void FixedUpdate()
     {
         if ((Input.GetKey("d") || Input.GetKey("right")) && EndLevel.playerEndLevel==false)
@@ -53,22 +83,7 @@ public class PlayerMove : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
             animator.SetBool("Run", false);
         }
-        if (Input.GetKey("space") && touchingFloor==true && EndLevel.playerEndLevel==false)
-        {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
-        }
 
-        touchingFloor = Physics2D.OverlapCircle(checkGround.position, checkGroundRadio, floorChecker);
-
-        if (touchingFloor==false)
-        {
-            animator.SetBool("Jump", true);
-            animator.SetBool("Run", false);
-        }
-        if (touchingFloor==true)
-        {
-            animator.SetBool("Jump", false);
-        }
 
         if (betterJump)
         {

@@ -39,7 +39,7 @@ public class PlayerMoveJoystick : MonoBehaviour
     void FixedUpdate()
     {
         horizontalMove = joystick.Horizontal * runSpeedHorizontal;
-        transform.position += new Vector3(horizontalMove, 0, 0) * Time.deltaTime * runSpeed;
+        transform.position += new Vector3(horizontalMove, 0, 0) * Time.deltaTime * runSpeedHorizontal;
 
     }
 
