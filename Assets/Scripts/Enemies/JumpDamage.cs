@@ -16,6 +16,8 @@ public class JumpDamage : MonoBehaviour
 
     public int lifes = 1;
 
+    public AudioSource clip;
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -30,6 +32,7 @@ public class JumpDamage : MonoBehaviour
     public void LosseLifeAndHit()
     {
         lifes--;
+        clip.Play();
         animator.Play("Hit");
     }
 

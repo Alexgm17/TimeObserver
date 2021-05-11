@@ -29,6 +29,10 @@ public class PlayerMove : MonoBehaviour
 
     public LayerMask floorChecker;
 
+    public AudioSource clipJump;
+
+    public AudioSource clipRun;
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -38,6 +42,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetKey("space") && touchingFloor == true && EndLevel.playerEndLevel == false)
         {
+            clipJump.Play();
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
         }
 
@@ -81,6 +86,10 @@ public class PlayerMove : MonoBehaviour
         else
         {
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+            if (touchingFloor == true)
+            {
+                clipRun.Play();
+            }
             animator.SetBool("Run", false);
         }
 
