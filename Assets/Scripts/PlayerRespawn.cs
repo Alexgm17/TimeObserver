@@ -16,6 +16,8 @@ public class PlayerRespawn : MonoBehaviour
 
     public GameObject coinsCount;
 
+    public SpriteRenderer scientistColor;
+
     private int life;
 
     private float checkPositionX, checkPositionY;
@@ -26,9 +28,13 @@ public class PlayerRespawn : MonoBehaviour
 
     private float timeInmunity;
 
+    public static bool playerDead = false;
+
     private void Start()
     {
         life = hearts.Length;
+
+        scientistColor = GetComponent<SpriteRenderer>();
 
         if (PlayerPrefs.GetFloat("checkPositionX")!=0)
         {
@@ -40,6 +46,8 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (life < 1)
         {
+            playerDead = true;
+            scientistColor.color = new Color(1, 1, 1, 0);
             hearts[0].gameObject.SetActive(false);
             animator.Play("Hit");
             CoinManager.globalCoinsCount -= CoinManager.levelCoinsCount;
@@ -77,6 +85,8 @@ public class PlayerRespawn : MonoBehaviour
             life--;
             timeInmunity = 0;
             CheckLife();
+            scientistColor.color = new Color(1, 1, 1, 0.4f);
+            Invoke("ChangeColor", 1f);
         }
     }
 
@@ -88,8 +98,14 @@ public class PlayerRespawn : MonoBehaviour
     void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        playerDead = false;
         buttonOptions.gameObject.SetActive(true);
         heartsUI.gameObject.SetActive(true);
         coinsCount.gameObject.SetActive(true);
+    }
+
+    void ChangeColor()
+    {
+        scientistColor.color = new Color(1, 1, 1, 1);
     }
 }

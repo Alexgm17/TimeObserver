@@ -25,6 +25,10 @@ public class PlayerMove : MonoBehaviour
 
     public float checkGroundRadio;
 
+    public GameObject dustLeft;
+
+    public GameObject dustRight;
+
     public bool touchingFloor;
 
     public LayerMask floorChecker;
@@ -40,7 +44,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey("space") && touchingFloor == true && EndLevel.playerEndLevel == false)
+        if (Input.GetKey("space") && touchingFloor == true && EndLevel.playerEndLevel == false && PlayerRespawn.playerDead == false)
         {
             clipJump.Play();
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
@@ -71,17 +75,39 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if ((Input.GetKey("d") || Input.GetKey("right")) && EndLevel.playerEndLevel==false)
+        if ((Input.GetKey("d") || Input.GetKey("right")) && EndLevel.playerEndLevel==false && PlayerRespawn.playerDead == false)
         {
             rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
             spriteRenderer.flipX = false;
             animator.SetBool("Run", true);
+
+            if (touchingFloor == true) 
+            {
+                dustLeft.SetActive(true);
+                dustRight.SetActive(false);
+            }
+            else
+            {
+                dustLeft.SetActive(false);
+                dustRight.SetActive(false);
+            }
         }
-        else if ((Input.GetKey("a") || Input.GetKey("left")) && EndLevel.playerEndLevel==false)
+        else if ((Input.GetKey("a") || Input.GetKey("left")) && EndLevel.playerEndLevel==false && PlayerRespawn.playerDead == false)
         {
             rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
             spriteRenderer.flipX = true;
             animator.SetBool("Run", true);
+
+            if (touchingFloor == true)
+            {
+                dustLeft.SetActive(false);
+                dustRight.SetActive(true);
+            }
+            else
+            {
+                dustLeft.SetActive(false);
+                dustRight.SetActive(false);
+            }
         }
         else
         {
@@ -91,6 +117,9 @@ public class PlayerMove : MonoBehaviour
                 clipRun.Play();
             }
             animator.SetBool("Run", false);
+
+            dustLeft.SetActive(false);
+            dustRight.SetActive(false);
         }
 
 
