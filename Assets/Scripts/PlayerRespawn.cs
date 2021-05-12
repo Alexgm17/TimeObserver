@@ -16,6 +16,8 @@ public class PlayerRespawn : MonoBehaviour
 
     public Animator animator;
 
+    public GameObject transition;
+
     private float timeInmunity;
 
     private void Start()
@@ -36,7 +38,8 @@ public class PlayerRespawn : MonoBehaviour
             animator.Play("Hit");
             CoinManager.globalCoinsCount -= CoinManager.levelCoinsCount;
             CoinManager.levelCoinsCount = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            transition.SetActive(true);
+            Invoke("ChangeScene", 1f);
         }
         else if (life < 2)
         {
@@ -71,5 +74,10 @@ public class PlayerRespawn : MonoBehaviour
     public void Update()
     {
         timeInmunity += Time.deltaTime;
+    }
+
+    void ChangeScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
