@@ -53,5 +53,6 @@ public class EndLevel : MonoBehaviour
         levelFinished.gameObject.SetActive(false);
         transition.SetActive(true);
         Invoke("ChangeScene", 1f);
+        playerEndLevel = false;
     }
 }

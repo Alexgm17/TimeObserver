@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\CoinCollected.cs" />
     <Compile Include="Assets\Scripts\Enemies\JumpDamage.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Scripts\Enemies\IARockySpike.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
