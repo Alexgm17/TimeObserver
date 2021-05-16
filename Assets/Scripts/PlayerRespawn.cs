@@ -82,7 +82,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (timeInmunity >= 1)
         {
-            life--;
+            life++;
             timeInmunity = 0;
             CheckLife();
             scientistColor.color = new Color(1, 1, 1, 0.4f);
