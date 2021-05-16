@@ -8,6 +8,8 @@ public class PlayerRespawn : MonoBehaviour
 {
     public AudioSource clip;
 
+    public AudioSource death;
+
     public GameObject[] hearts;
 
     public GameObject buttonOptions;
@@ -46,6 +48,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (life < 1)
         {
+            death.Play();
             playerDead = true;
             scientistColor.color = new Color(1, 1, 1, 0);
             hearts[0].gameObject.SetActive(false);
@@ -82,7 +85,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (timeInmunity >= 1)
         {
-            life++;
+            life--;
             timeInmunity = 0;
             CheckLife();
             scientistColor.color = new Color(1, 1, 1, 0.4f);

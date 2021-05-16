@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class EndLevel : MonoBehaviour
 {
+    public AudioSource clip;
 
     public Text levelFinished;
 
@@ -24,6 +26,7 @@ public class EndLevel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            clip.Play();
             levelFinished.gameObject.SetActive(true);
             playerEndLevel = true;
             CoinManager.levelCoinsCount = 0;

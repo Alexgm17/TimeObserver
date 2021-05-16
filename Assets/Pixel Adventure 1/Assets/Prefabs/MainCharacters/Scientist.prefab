@@ -561,6 +561,8 @@ MonoBehaviour:
   animator: {fileID: 7774659308463092946}
   checkGround: {fileID: 7774659306870960389}
   checkGroundRadio: 0.04
+  dustLeft: {fileID: 0}
+  dustRight: {fileID: 0}
   touchingFloor: 0
   floorChecker:
     serializedVersion: 2
@@ -580,6 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 26972653}
+  death: {fileID: 0}
   hearts:
   - {fileID: 0}
   - {fileID: 0}
