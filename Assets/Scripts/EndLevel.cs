@@ -41,6 +41,7 @@ public class EndLevel : MonoBehaviour
 
     void ChangeScene()
     {
+        playerEndLevel = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         buttonOptions.gameObject.SetActive(true);
         hearts.gameObject.SetActive(true);
@@ -56,6 +57,5 @@ public class EndLevel : MonoBehaviour
         levelFinished.gameObject.SetActive(false);
         transition.SetActive(true);
         Invoke("ChangeScene", 1f);
-        playerEndLevel = false;
     }
 }
