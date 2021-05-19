@@ -560,7 +560,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7774659308463092947}
   animator: {fileID: 7774659308463092946}
   checkGround: {fileID: 7774659306870960389}
-  checkGroundRadio: 0.04
+  checkGroundRadio: 0.05
   dustLeft: {fileID: 0}
   dustRight: {fileID: 0}
   touchingFloor: 0
