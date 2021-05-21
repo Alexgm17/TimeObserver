@@ -396,8 +396,8 @@ GameObject:
   - component: {fileID: 7774659308460959280}
   - component: {fileID: 1731772305075716777}
   - component: {fileID: 26972649}
-  - component: {fileID: 26972650}
   - component: {fileID: 26972653}
+  - component: {fileID: -8498996352894596921}
   m_Layer: 0
   m_Name: Scientist
   m_TagString: Player
@@ -568,7 +568,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   clipJump: {fileID: 26972649}
-  clipRun: {fileID: 26972650}
+  clipRun: {fileID: 0}
 --- !u!114 &7774659308460959280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 26972653}
-  death: {fileID: 0}
+  death: {fileID: -8498996352894596921}
   hearts:
   - {fileID: 0}
   - {fileID: 0}
@@ -713,7 +713,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &26972650
+--- !u!82 &26972653
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -723,11 +723,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dc7d1e5fde1ac3749848c3522f40989c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4ea8d436ce0b3874ca3c4c21bbb8cf4e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0
+  m_Volume: 0.1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -809,7 +809,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &26972653
+--- !u!82 &-8498996352894596921
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -819,9 +819,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4ea8d436ce0b3874ca3c4c21bbb8cf4e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ec83e069f70b46946b86dbb5c1e81496, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.55
   m_Pitch: 1
   Loop: 0
   Mute: 0
