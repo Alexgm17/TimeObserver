@@ -144,7 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e635403853aea8545be027fe466b2fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 6932775239079728160}
+  coinCollectedClip: {fileID: 6932775239079728160}
+  collected: 0
 --- !u!82 &6932775239079728160
 AudioSource:
   m_ObjectHideFlags: 0

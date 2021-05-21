@@ -21,22 +21,18 @@ public class EndLevel : MonoBehaviour
 
     public static bool playerEndLevel = false;
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            clip.Play();
-            levelFinished.gameObject.SetActive(true);
-            playerEndLevel = true;
-            CoinManager.levelCoinsCount = 0;
-            StartCoroutine(LevelEndTransition());
+            if (playerEndLevel == false) {
+                clip.Play();
+                levelFinished.gameObject.SetActive(true);
+                playerEndLevel = true;
+                CoinManager.levelCoinsCount = 0;
+                StartCoroutine(LevelEndTransition());
+            }
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        playerEndLevel = false;
     }
 
     void ChangeScene()

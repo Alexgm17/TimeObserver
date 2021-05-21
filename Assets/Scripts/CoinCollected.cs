@@ -5,9 +5,9 @@ using UnityEngine.Audio;
 
 public class CoinCollected : MonoBehaviour
 {
-    public AudioSource clip;
+    public AudioSource coinCollectedClip;
 
-    bool collected = false;
+    public bool collected = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,7 +22,7 @@ public class CoinCollected : MonoBehaviour
             {
                 collected = true;
                 CoinManager.coinManager.AddCoin(1);
-                clip.Play();
+                coinCollectedClip.Play();
             }
         }
     }
