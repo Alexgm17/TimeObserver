@@ -71,11 +71,11 @@
     <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\CoinManager.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-    <Compile Include="Assets\Scripts\EnemyRockySpike.cs" />
     <Compile Include="Assets\Scripts\PlayerMoveJoystick.cs" />
     <Compile Include="Assets\Scripts\CoinCollected.cs" />
     <Compile Include="Assets\Scripts\Enemies\JumpDamage.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Scripts\PlayerMoveDoubleJump.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
