@@ -24,7 +24,7 @@ public class PlantEnemy : MonoBehaviour
         if (waitedTime <= 0)
         {
             waitedTime = waitedTimeToAttack;
-            animator.Play("PlantAttack");
+            animator.Play("Attack");
             Invoke("LaunchBullet", 0.5f);
         }
         else
