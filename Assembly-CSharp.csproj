@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
      <Compile Include="Assets\Scripts\DamageObject.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Plant\BulletPlant.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Scripts\Enemies\IABasic.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\Scripts\PlayerRespawn.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
      <Compile Include="Assets\Scripts\EndLevel.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Plant\PlantEnemy.cs" />
      <Compile Include="Assets\Scripts\Platform.cs" />
      <Compile Include="Assets\Scripts\CoinManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMoveDoubleJump.cs" />
