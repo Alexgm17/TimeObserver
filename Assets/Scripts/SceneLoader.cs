@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
+    public GameObject transition;
+
     public void LoadGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
