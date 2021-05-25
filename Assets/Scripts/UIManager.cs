@@ -44,8 +44,14 @@ public class UIManager : MonoBehaviour
 
     public void GoMainMenu()
     {
-        //Time.timeScale = 1;
-        SceneManager.LoadScene("");
+        Time.timeScale = 1;
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            SceneManager.LoadScene("GameMenu");
+        } else if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void QuitGame()
