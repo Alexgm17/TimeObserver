@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class OpenDoor : MonoBehaviour
 {
-    public TMP_Text text;
+    public Image image;
     public string levelName;
     private bool inDoor = false;
     private bool open = false;
@@ -15,24 +14,38 @@ public class OpenDoor : MonoBehaviour
     public AudioSource music;
     public AudioSource jump;
     public AudioSource doorOpen;
+    public GameObject canvas;
+    public GameObject panelOptions;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            text.gameObject.SetActive(true);
+            image.gameObject.SetActive(true);
             inDoor = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        text.gameObject.SetActive(false);
+        image.gameObject.SetActive(false);
         inDoor = false;
     }
 
     private void Update()
     {
+        if (panelOptions.active)
+        {
+            image.gameObject.SetActive(false);
+        }
+        else
+        {
+            if (inDoor)
+            {
+                image.gameObject.SetActive(true);
+            }
+        }
+
         if (inDoor && Input.GetKey("e"))
         {
             jump.volume = 0;
@@ -42,7 +55,7 @@ public class OpenDoor : MonoBehaviour
                 doorOpen.Play();
                 open = true;
             }
-            text.gameObject.SetActive(false);
+            canvas.gameObject.SetActive(false);
             transition.SetActive(true);
             Invoke("ChangeScene", 1f);
         }

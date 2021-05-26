@@ -12,11 +12,7 @@ public class PlayerRespawn : MonoBehaviour
 
     public GameObject[] hearts;
 
-    public GameObject buttonOptions;
-
-    public GameObject heartsUI;
-
-    public GameObject coinsCount;
+    public GameObject canvas;
 
     public SpriteRenderer scientistColor;
 
@@ -55,9 +51,7 @@ public class PlayerRespawn : MonoBehaviour
             animator.Play("Hit");
             CoinManager.globalCoinsCount -= CoinManager.levelCoinsCount;
             CoinManager.levelCoinsCount = 0;
-            buttonOptions.gameObject.SetActive(false);
-            heartsUI.gameObject.SetActive(false);
-            coinsCount.gameObject.SetActive(false);
+            canvas.gameObject.SetActive(false);
             transition.SetActive(true);
             Invoke("ChangeScene", 1f);
         }
@@ -102,9 +96,6 @@ public class PlayerRespawn : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         playerDead = false;
-        buttonOptions.gameObject.SetActive(true);
-        heartsUI.gameObject.SetActive(true);
-        coinsCount.gameObject.SetActive(true);
     }
 
     void ChangeColor()

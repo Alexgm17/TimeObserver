@@ -11,11 +11,7 @@ public class EndLevel : MonoBehaviour
 
     public Text levelFinished;
 
-    public GameObject buttonOptions;
-
-    public GameObject hearts;
-
-    public GameObject coinsCount;
+    public GameObject canvas;
 
     public GameObject transition;
 
@@ -39,17 +35,12 @@ public class EndLevel : MonoBehaviour
     {
         playerEndLevel = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        buttonOptions.gameObject.SetActive(true);
-        hearts.gameObject.SetActive(true);
-        coinsCount.gameObject.SetActive(true);
     }
 
     IEnumerator LevelEndTransition()
     {
         yield return new WaitForSeconds(1.5f);
-        buttonOptions.gameObject.SetActive(false);
-        hearts.gameObject.SetActive(false);
-        coinsCount.gameObject.SetActive(false);
+        canvas.gameObject.SetActive(false);
         levelFinished.gameObject.SetActive(false);
         transition.SetActive(true);
         Invoke("ChangeScene", 1f);

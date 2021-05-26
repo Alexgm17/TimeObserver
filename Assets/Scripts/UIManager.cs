@@ -8,19 +8,27 @@ public class UIManager : MonoBehaviour
 {
     public AudioSource clip;
 
+    public AudioSource music;
+
     public GameObject optionsPanel;
+
+    public GameObject menuButton;
+
+    public GameObject transition;
+
+    public GameObject hearts;
+
+    public GameObject coins;
 
     public void Update()
     {
         if (Input.GetKeyDown("escape") && optionsPanel.activeSelf == false)
         {
             OptionsPanel();
-            PlaySoundButton();
         }
         else if (Input.GetKeyDown("escape") && optionsPanel.activeSelf == true)
         {
             Return();
-            PlaySoundButton();
         }
     }
 
@@ -28,32 +36,48 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 0;
         optionsPanel.SetActive(true);
+        clip.Play();
     }
 
     public void Return()
     {
         Time.timeScale = 1;
         optionsPanel.SetActive(false);
+        clip.Play();
     }
 
     public void GoGameMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("GameMenu");
+        music.Stop();
+        clip.Play();
+        optionsPanel.gameObject.SetActive(false);
+        menuButton.gameObject.SetActive(false); 
+        hearts.gameObject.SetActive(false);
+        coins.gameObject.SetActive(false);
+        transition.SetActive(true);
+        Invoke("ChangeSceneGameMenu", 1f);
     }
     public void GoMainMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();    
-    }
-
-    public void PlaySoundButton()
-    {
+        music.Stop();
         clip.Play();
+        optionsPanel.gameObject.SetActive(false);
+        menuButton.gameObject.SetActive(false);
+        hearts.gameObject.SetActive(false);
+        coins.gameObject.SetActive(false);
+        transition.SetActive(true);
+        Invoke("ChangeSceneMainMenu", 1f);
+    }
+
+    void ChangeSceneGameMenu()
+    {
+        SceneManager.LoadScene("GameMenu");
+    }
+
+    void ChangeSceneMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
