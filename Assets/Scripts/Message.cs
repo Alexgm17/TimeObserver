@@ -10,6 +10,7 @@ public class Message : MonoBehaviour
     public AudioSource jump;
     public static bool hasrun;
     public AudioSource audio;
+    public GameObject optionsPanel;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class Message : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("escape") || Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("e") || optionsPanel.active == true)
         {
             Time.timeScale = 1;
             jump.mute = false;
