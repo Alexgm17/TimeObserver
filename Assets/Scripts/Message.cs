@@ -11,6 +11,7 @@ public class Message : MonoBehaviour
     public static bool hasrun;
     public AudioSource audio;
     public GameObject optionsPanel;
+    public GameObject messageBackground;
 
     void Start()
     {
@@ -18,10 +19,11 @@ public class Message : MonoBehaviour
         {
             Time.timeScale = 0;
             jump.mute = true;
+            hasrun = true;
+            messageBackground.gameObject.SetActive(true);
             image.gameObject.SetActive(true);
             key.gameObject.SetActive(true);
             text.gameObject.SetActive(true);
-            hasrun = true;
         }
     }
 
@@ -31,6 +33,7 @@ public class Message : MonoBehaviour
         {
             Time.timeScale = 1;
             jump.mute = false;
+            messageBackground.gameObject.SetActive(false);
             image.gameObject.SetActive(false);
             key.gameObject.SetActive(false);
             text.gameObject.SetActive(false);
