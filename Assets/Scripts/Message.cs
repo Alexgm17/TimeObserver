@@ -8,7 +8,7 @@ public class Message : MonoBehaviour
     public GameObject key;
     public GameObject text;
     public AudioSource jump;
-    public static bool hasrun;
+    public static bool hasrun = false;
     public AudioSource audio;
     public GameObject optionsPanel;
     public GameObject messageBackground;
