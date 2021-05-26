@@ -34,7 +34,7 @@ public class OpenDoor : MonoBehaviour
 
     private void Update()
     {
-        if (panelOptions.active)
+        if (panelOptions.active || transition.active)
         {
             image.gameObject.SetActive(false);
         }
