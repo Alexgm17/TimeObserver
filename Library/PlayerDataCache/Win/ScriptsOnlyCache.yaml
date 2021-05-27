@@ -28,10 +28,13 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -1293,7 +1296,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: e74a15010cbc294f5f410f7eceba4865
+      Hash: 94c9691415bc07bc9c077302fc6cc8e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -1993,4 +1996,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/World2/World2Level2.unity
   - Assets/Scenes/World2/World2Level3.unity
   - Assets/Scenes/World3/World3Level1.unity
-  playerPath: D:/Nueva carpeta/TimeObserver.exe
+  playerPath: C:/Users/alfon/Desktop/Time Observer/Time Observer.exe
