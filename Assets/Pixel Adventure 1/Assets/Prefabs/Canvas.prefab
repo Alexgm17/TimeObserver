@@ -875,7 +875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1527,6 +1527,7 @@ MonoBehaviour:
   transition: {fileID: 0}
   hearts: {fileID: 7512145700334560390}
   coins: {fileID: 3204160611322001665}
+  player: {fileID: 0}
 --- !u!82 &233818474430420111
 AudioSource:
   m_ObjectHideFlags: 0
