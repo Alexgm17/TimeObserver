@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
 
     public GameObject coins;
 
+    public AudioSource player;
+
     public void Update()
     {
         if (Input.GetKeyDown("escape") && optionsPanel.activeSelf == false)
@@ -35,6 +37,7 @@ public class UIManager : MonoBehaviour
     public void OptionsPanel()
     {
         Time.timeScale = 0;
+        player.mute = true;
         optionsPanel.SetActive(true);
         clip.Play();
     }
@@ -42,6 +45,7 @@ public class UIManager : MonoBehaviour
     public void Return()
     {
         Time.timeScale = 1;
+        player.mute = false;
         optionsPanel.SetActive(false);
         clip.Play();
     }
