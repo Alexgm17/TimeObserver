@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Enemies\Plant\BulletPlant.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Scripts\Enemies\IABasic.cs" />
+     <Compile Include="Assets\Scripts\Options\Volume.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
