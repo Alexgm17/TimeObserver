@@ -31,9 +31,9 @@ public class JumpDamage : MonoBehaviour
 
     public void LosseLifeAndHit()
     {
-        lifes--;
         clip.Play();
         animator.Play("Hit");
+        lifes--;
     }
 
     public void CheckLife()
