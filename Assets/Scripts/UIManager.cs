@@ -22,13 +22,15 @@ public class UIManager : MonoBehaviour
 
     public AudioSource player;
 
+    public bool sceneLoading = false;
+
     public void Update()
     {
-        if (Input.GetKeyDown("escape") && optionsPanel.activeSelf == false)
+        if (Input.GetKeyDown("escape") && optionsPanel.activeSelf == false && sceneLoading == false)
         {
             OptionsPanel();
         }
-        else if (Input.GetKeyDown("escape") && optionsPanel.activeSelf == true)
+        else if (Input.GetKeyDown("escape") && optionsPanel.activeSelf == true && sceneLoading == false)
         {
             Return();
         }
@@ -53,25 +55,27 @@ public class UIManager : MonoBehaviour
     public void GoGameMenu()
     {
         Time.timeScale = 1;
+        sceneLoading = true;
         music.Stop();
         clip.Play();
+        transition.SetActive(true);
         optionsPanel.gameObject.SetActive(false);
         menuButton.gameObject.SetActive(false); 
         hearts.gameObject.SetActive(false);
         coins.gameObject.SetActive(false);
-        transition.SetActive(true);
         Invoke("ChangeSceneGameMenu", 1f);
     }
     public void GoMainMenu()
     {
         Time.timeScale = 1;
+        sceneLoading = true;
         music.Stop();
         clip.Play();
+        transition.SetActive(true);
         optionsPanel.gameObject.SetActive(false);
         menuButton.gameObject.SetActive(false);
         hearts.gameObject.SetActive(false);
         coins.gameObject.SetActive(false);
-        transition.SetActive(true);
         Invoke("ChangeSceneMainMenu", 1f);
     }
 
