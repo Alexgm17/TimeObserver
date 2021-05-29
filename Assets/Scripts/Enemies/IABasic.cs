@@ -71,7 +71,7 @@ public class IABasic : MonoBehaviour
         {
             spriteRenderer.flipX = false;
             animator.SetBool("Idle", false);
-        }
+        }        
         else if (transform.position.x==actualPosition.x)
         {
             animator.SetBool("Idle", true);
