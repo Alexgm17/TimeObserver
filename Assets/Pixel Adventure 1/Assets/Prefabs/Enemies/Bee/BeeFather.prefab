@@ -354,7 +354,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4624020053143702668}
   destroyParticle: {fileID: 4624020052576302052}
   jumpForce: 2.5
-  lifes: 1
+  lifes: 2
   clip: {fileID: 4624020053143702664}
 --- !u!82 &4624020053143702664
 AudioSource:
