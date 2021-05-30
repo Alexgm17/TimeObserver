@@ -15,16 +15,16 @@ public class EndLastLevel : MonoBehaviour
 
     public GameObject transition;
 
-    public static bool playerEndLevel = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            if (playerEndLevel == false) {
+            if (EndLevel.playerEndLevel == false)
+            {
                 clip.Play();
                 levelFinished.gameObject.SetActive(true);
-                playerEndLevel = true;
+                EndLevel.playerEndLevel = true;
                 CoinManager.levelCoinsCount = 0;
                 StartCoroutine(LevelEndTransition());
             }
@@ -33,7 +33,7 @@ public class EndLastLevel : MonoBehaviour
 
     void ChangeScene()
     {
-        playerEndLevel = false;
+        EndLevel.playerEndLevel = false;
         SceneManager.LoadScene("GameMenu");
     }
 
