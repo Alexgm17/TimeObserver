@@ -12,6 +12,7 @@ public class OpenDoor : MonoBehaviour
     private bool open = false;
     public GameObject transition;
     public AudioSource music;
+    public AudioSource portal;
     public AudioSource jump;
     public AudioSource doorOpen;
     public GameObject canvas;
@@ -21,6 +22,8 @@ public class OpenDoor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            portal.Play();
+            music.volume = 0.03f;
             image.gameObject.SetActive(true);
             inDoor = true;
         }
@@ -28,6 +31,8 @@ public class OpenDoor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        portal.Stop();
+        music.volume = 0.1f;
         image.gameObject.SetActive(false);
         inDoor = false;
     }
@@ -49,6 +54,7 @@ public class OpenDoor : MonoBehaviour
         if (inDoor && Input.GetKey("e"))
         {
             jump.volume = 0;
+            portal.Stop();
             music.Stop();
             if (open == false)
             {
