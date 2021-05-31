@@ -587,9 +587,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  buttonOptions: {fileID: 0}
-  heartsUI: {fileID: 0}
-  coinsCount: {fileID: 0}
+  canvas: {fileID: 0}
   scientistColor: {fileID: 8164727954845686193}
   animator: {fileID: 8164727954845686204}
   transition: {fileID: 0}

@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Props\Trampoline.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\Scripts\PlayerRespawn.cs" />
+     <Compile Include="Assets\Scripts\PlayerMoveFull.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\Scripts\Options\Brightness.cs" />
      <Compile Include="Assets\Scripts\Enemies\Bee\Bee.cs" />
