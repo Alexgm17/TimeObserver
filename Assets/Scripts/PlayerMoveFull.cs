@@ -39,6 +39,8 @@ public class PlayerMoveFull : MonoBehaviour
 
     public AudioSource clipJump;
 
+    public AudioSource clipDash;
+
     public float dashCooldown;
 
     public float dashForce;
@@ -122,11 +124,13 @@ public class PlayerMoveFull : MonoBehaviour
 
             if (Input.GetKey("left shift") && dashCooldown <= 0 && EndLevel.playerEndLevel == false && PlayerRespawn.playerDead == false)
             {
+                clipDash.Play();
                 Dash();
             }
         }
         else if (Input.GetKey("left shift") && dashCooldown <= 0 && EndLevel.playerEndLevel == false && PlayerRespawn.playerDead == false)
         {
+            clipDash.Play();
             Dash();
         }
         else if ((Input.GetKey("a") || Input.GetKey("left")) && EndLevel.playerEndLevel == false && PlayerRespawn.playerDead == false)
@@ -148,6 +152,7 @@ public class PlayerMoveFull : MonoBehaviour
 
             if (Input.GetKey("left shift") && dashCooldown <= 0 && EndLevel.playerEndLevel == false && PlayerRespawn.playerDead == false)
             {
+                clipDash.Play();
                 Dash();
             }
         }
