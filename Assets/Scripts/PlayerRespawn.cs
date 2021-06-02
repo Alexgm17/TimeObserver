@@ -24,7 +24,7 @@ public class PlayerRespawn : MonoBehaviour
 
     public GameObject transition;
 
-    private float timeInmunity;
+    public static float timeInmunity;
 
     public static bool playerDead = false;
 

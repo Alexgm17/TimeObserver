@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Message : MonoBehaviour
 {
@@ -8,18 +9,21 @@ public class Message : MonoBehaviour
     public GameObject key;
     public GameObject text;
     public AudioSource jump;
-    public static bool hasrun = false;
     public AudioSource audio;
     public GameObject optionsPanel;
     public GameObject messageBackground;
 
     void Start()
     {
-        if (!hasrun)
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (!PlayerPrefs.HasKey(sceneName + "Message"))
         {
+            PlayerPrefs.SetInt(sceneName + "Message", 1);
+
             Time.timeScale = 0;
             jump.mute = true;
-            hasrun = true;
             messageBackground.gameObject.SetActive(true);
             image.gameObject.SetActive(true);
             key.gameObject.SetActive(true);

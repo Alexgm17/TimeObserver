@@ -15,6 +15,9 @@ public class CoinManager : MonoBehaviour
 
     public void Start()
     {
+        globalCoinsCount = PlayerPrefs.GetInt("TotalCoins");
+        totalCoins.text = globalCoinsCount.ToString();
+
         if (coinManager != null && coinManager != this)
         {
             Destroy(gameObject);
@@ -38,6 +41,8 @@ public class CoinManager : MonoBehaviour
     {
         levelCoinsCount += c;
         globalCoinsCount += c;
+
+        PlayerPrefs.SetInt("TotalCoins", globalCoinsCount);
 
         totalCoins.text = globalCoinsCount.ToString();
     }

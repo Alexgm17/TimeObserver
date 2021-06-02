@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
     public void GoGameMenu()
     {
         Time.timeScale = 1;
+        PlayerRespawn.timeInmunity = -1;
         sceneLoading = true;
         music.Stop();
         clip.Play();
@@ -68,6 +69,7 @@ public class UIManager : MonoBehaviour
     public void GoMainMenu()
     {
         Time.timeScale = 1;
+        PlayerRespawn.timeInmunity = -1;
         sceneLoading = true;
         music.Stop();
         clip.Play();
