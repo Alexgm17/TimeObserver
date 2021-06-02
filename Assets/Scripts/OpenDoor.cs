@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class OpenDoor : MonoBehaviour
 {
     public Image image;
+    public Image forbiddenImage;
     public string levelName;
     private bool inDoor = false;
+    private bool unlockedWorld = false;
     private bool open = false;
     public GameObject transition;
     public AudioSource music;
@@ -22,10 +24,19 @@ public class OpenDoor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            portal.Play();
-            music.volume = 0.03f;
-            image.gameObject.SetActive(true);
-            inDoor = true;
+            if (levelName == "World2Level1" && !PlayerPrefs.HasKey("UnlockWorld2") || levelName == "World3Level1" && !PlayerPrefs.HasKey("UnlockWorld3"))
+            {
+                forbiddenImage.gameObject.SetActive(true);
+                inDoor = true;
+            }
+            else
+            {
+                portal.Play();
+                music.volume = 0.03f;
+                image.gameObject.SetActive(true);
+                inDoor = true;
+                unlockedWorld = true;
+            }
         }
     }
 
@@ -34,6 +45,7 @@ public class OpenDoor : MonoBehaviour
         portal.Stop();
         music.volume = 0.1f;
         image.gameObject.SetActive(false);
+        forbiddenImage.gameObject.SetActive(false);
         inDoor = false;
     }
 
@@ -42,28 +54,33 @@ public class OpenDoor : MonoBehaviour
         if (panelOptions.active || transition.active)
         {
             image.gameObject.SetActive(false);
+            forbiddenImage.gameObject.SetActive(false);
         }
-        else
+        else if (inDoor)
         {
-            if (inDoor)
+            if (levelName == "World2Level1" && !PlayerPrefs.HasKey("UnlockWorld2") || levelName == "World3Level1" && !PlayerPrefs.HasKey("UnlockWorld3"))
+            {
+                forbiddenImage.gameObject.SetActive(true);
+            }
+            else
             {
                 image.gameObject.SetActive(true);
             }
-        }
 
-        if (inDoor && Input.GetKey("e"))
-        {
-            jump.volume = 0;
-            portal.Stop();
-            music.Stop();
-            if (open == false)
+            if (Input.GetKey("e") && unlockedWorld)
             {
-                doorOpen.Play();
-                open = true;
+                jump.volume = 0;
+                portal.Stop();
+                music.Stop();
+                if (open == false)
+                {
+                    doorOpen.Play();
+                    open = true;
+                }
+                canvas.gameObject.SetActive(false);
+                transition.SetActive(true);
+                Invoke("ChangeScene", 1f);
             }
-            canvas.gameObject.SetActive(false);
-            transition.SetActive(true);
-            Invoke("ChangeScene", 1f);
         }
     }
 
