@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerSelect : MonoBehaviour
 {
 
-    public enum Player {Scientist, MaskDude, Frog, PinkMan, VirtualGuay};
+    public enum Player {Scientist, MaskDude, Frog, PinkMan, VirtualGuy};
     public Player playerSelected;
 
     public Animator animator;
@@ -35,7 +35,7 @@ public class PlayerSelect : MonoBehaviour
                 spriteRenderer.sprite = playersRenderer[3];
                 animator.runtimeAnimatorController = playersController[3];
                 break;
-            case Player.VirtualGuay:
+            case Player.VirtualGuy:
                 spriteRenderer.sprite = playersRenderer[4];
                 animator.runtimeAnimatorController = playersController[4];
                 break;

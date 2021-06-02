@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 8164727954845686202}
   - component: {fileID: 8164727954845686201}
   - component: {fileID: 8164727954845686200}
+  - component: {fileID: 8999559205683371180}
   m_Layer: 0
   m_Name: ScientistDoubleJump
   m_TagString: Untagged
@@ -903,3 +904,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8999559205683371180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164727954845686192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b752241f3bb2ad044b4ae50c1cdf4221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSelected: 0
+  animator: {fileID: 8164727954845686204}
+  spriteRenderer: {fileID: 8164727954845686193}
+  playersController:
+  - {fileID: 9100000, guid: bdd0a7f29c3e492408d17cf256625d72, type: 2}
+  - {fileID: 9100000, guid: 07a4a382e424da943bdc16d37aefe545, type: 2}
+  - {fileID: 9100000, guid: baae1c70012c7a34e9443d61afd127e4, type: 2}
+  - {fileID: 9100000, guid: 04c61af4e92183f4aa7e2da80227ac1f, type: 2}
+  - {fileID: 9100000, guid: c46030d04cbfd984db88816bd7e2a6b0, type: 2}
+  playersRenderer:
+  - {fileID: -6367560908665664636, guid: ad5eeb217856d5f4caaa8309bae0766b, type: 3}
+  - {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
+  - {fileID: -6367560908665664636, guid: cd947491a13509945aa1b644f9db3ef2, type: 3}
+  - {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
+  - {fileID: -6367560908665664636, guid: 40de9a8703e2e5a47882b0b86451c741, type: 3}
