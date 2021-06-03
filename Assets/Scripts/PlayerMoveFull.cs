@@ -105,7 +105,7 @@ public class PlayerMoveFull : MonoBehaviour
 
     void FixedUpdate()
     {
-        if ((Input.GetKey("d") || Input.GetKey("right")) && EndLevel.playerEndLevel == false && PlayerRespawn.playerDead == false)
+        if ((Input.GetKey("d") || Input.GetKey("right")) && EndLevel.playerEndLevel == false && PlayerRespawn.playerDead == false )
         {
             rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
             spriteRenderer.flipX = false;

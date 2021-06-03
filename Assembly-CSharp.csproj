@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{127721DB-48CD-9E58-D242-6FDE96A66738}</ProjectGuid>
+    <ProjectGuid>{BBF00A01-71B0-3235-E59B-D46143D57976}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts\Enemies\IANuclearSkull.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Props\Platform.cs" />
+    <Compile Include="Assets\Scripts\ChangeSkinsDoor.cs" />
     <Compile Include="Assets\Scripts\CoinManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\PlayerMoveDoubleJump.cs" />
@@ -129,7 +130,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\ChangeDoorSkins.cs" />
+    <Compile Include="Assets\Scripts\PlayerMoveMenu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
