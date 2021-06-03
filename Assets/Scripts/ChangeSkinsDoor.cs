@@ -27,6 +27,8 @@ public class ChangeSkinsDoor : MonoBehaviour
     public GameObject panelOptions;
     public Text totalCoins;
     public AudioSource clip;
+    public AudioSource locked;
+    public AudioSource purchase;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -114,6 +116,7 @@ public class ChangeSkinsDoor : MonoBehaviour
     {
         PlayerPrefs.SetString("PlayerSelected", "Scientist");
         ResetPlayerSkin();
+        clip.Play();
     }
 
     public void SetPlayerMaskDude()
@@ -122,6 +125,7 @@ public class ChangeSkinsDoor : MonoBehaviour
         {
             PlayerPrefs.SetString("PlayerSelected", "MaskDude");
             ResetPlayerSkin();
+            clip.Play();
         }
         else if (CoinManager.globalCoinsCount >= 250)
         {
@@ -134,10 +138,11 @@ public class ChangeSkinsDoor : MonoBehaviour
             coinMaskDude.SetActive(false);
             PlayerPrefs.SetString("PlayerSelected", "MaskDude");
             ResetPlayerSkin();
+            purchase.Play();
         }
         else
         {
-            clip.Play();
+            locked.Play();
         }
     }
 
@@ -147,6 +152,7 @@ public class ChangeSkinsDoor : MonoBehaviour
         {
             PlayerPrefs.SetString("PlayerSelected", "Frog");
             ResetPlayerSkin();
+            clip.Play();
         }
         else if (CoinManager.globalCoinsCount >= 750)
         {
@@ -159,10 +165,11 @@ public class ChangeSkinsDoor : MonoBehaviour
             coinFrog.SetActive(false);
             PlayerPrefs.SetString("PlayerSelected", "Frog");
             ResetPlayerSkin();
+            purchase.Play();
         }
         else
         {
-            clip.Play();
+            locked.Play();
         }
     }
 
@@ -172,6 +179,7 @@ public class ChangeSkinsDoor : MonoBehaviour
         {
             PlayerPrefs.SetString("PlayerSelected", "PinkMan");
             ResetPlayerSkin();
+            clip.Play();
         }
         else if (CoinManager.globalCoinsCount >= 1000)
         {
@@ -184,10 +192,11 @@ public class ChangeSkinsDoor : MonoBehaviour
             coinPinkMan.SetActive(false);
             PlayerPrefs.SetString("PlayerSelected", "PinkMan");
             ResetPlayerSkin();
+            purchase.Play();
         }
         else
         {
-            clip.Play();
+            locked.Play();
         }
     }
 
@@ -197,6 +206,7 @@ public class ChangeSkinsDoor : MonoBehaviour
         {
             PlayerPrefs.SetString("PlayerSelected", "VirtualGuy");
             ResetPlayerSkin();
+            clip.Play();
         }
         else if (CoinManager.globalCoinsCount >= 2000)
         {
@@ -209,10 +219,11 @@ public class ChangeSkinsDoor : MonoBehaviour
             coinVirtualGuy.SetActive(false);
             PlayerPrefs.SetString("PlayerSelected", "VirtualGuy");
             ResetPlayerSkin();
+            purchase.Play();
         }
         else
         {
-            clip.Play();
+            locked.Play();
         }
     }
 
@@ -221,6 +232,5 @@ public class ChangeSkinsDoor : MonoBehaviour
         jump.volume = 0.5f;
         skinsPanel.gameObject.SetActive(false);
         player.GetComponent<PlayerSelect>().ChangePlayerInMenu();
-        clip.Play();
     }
 }
