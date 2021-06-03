@@ -1714,7 +1714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 147.79999, y: -17.000002}
+  m_AnchoredPosition: {x: 184.6, y: -17.000002}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &520284283
@@ -2516,7 +2516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250.19998, y: 127.3}
+  m_AnchoredPosition: {x: 287, y: 127.3}
   m_SizeDelta: {x: 32.9228, y: 45.4087}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780919797
@@ -3195,7 +3195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 215.49998, y: -17.000002}
+  m_AnchoredPosition: {x: 252.29999, y: -17.000002}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &920506606
@@ -6604,7 +6604,7 @@ MonoBehaviour:
     DASH
 
 
-    ATRAVESAR TRAMPILLAS
+    ATRAVESAR PLATAFORMAS
 
 
     PAUSAR'
