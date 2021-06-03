@@ -26,6 +26,7 @@ public class ChangeSkinsDoor : MonoBehaviour
     public GameObject coinVirtualGuy;
     public GameObject panelOptions;
     public Text totalCoins;
+    public AudioSource clip;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -69,7 +70,7 @@ public class ChangeSkinsDoor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         shop.Stop();
-        music.Play();
+        music.mute = false;
         music.volume = 0.1f;
         image.gameObject.SetActive(false);
         skinsPanel.gameObject.SetActive(false);
@@ -95,10 +96,15 @@ public class ChangeSkinsDoor : MonoBehaviour
 
                 if (Input.GetKey("e"))
                 {
-                    jump.volume = 0;
+                    jump.mute = true;
                     shop.volume = 0.1f;
-                    music.Stop();
+                    clip.Play();
+                    music.mute = true;
                     skinsPanel.gameObject.SetActive(true);
+                }
+                else
+                {
+                    jump.mute = false;
                 }
             }
         }
@@ -129,6 +135,10 @@ public class ChangeSkinsDoor : MonoBehaviour
             PlayerPrefs.SetString("PlayerSelected", "MaskDude");
             ResetPlayerSkin();
         }
+        else
+        {
+            clip.Play();
+        }
     }
 
     public void SetPlayerFrog()
@@ -149,6 +159,10 @@ public class ChangeSkinsDoor : MonoBehaviour
             coinFrog.SetActive(false);
             PlayerPrefs.SetString("PlayerSelected", "Frog");
             ResetPlayerSkin();
+        }
+        else
+        {
+            clip.Play();
         }
     }
 
@@ -171,6 +185,10 @@ public class ChangeSkinsDoor : MonoBehaviour
             PlayerPrefs.SetString("PlayerSelected", "PinkMan");
             ResetPlayerSkin();
         }
+        else
+        {
+            clip.Play();
+        }
     }
 
     public void SetPlayerVirtualGuy()
@@ -192,6 +210,10 @@ public class ChangeSkinsDoor : MonoBehaviour
             PlayerPrefs.SetString("PlayerSelected", "VirtualGuy");
             ResetPlayerSkin();
         }
+        else
+        {
+            clip.Play();
+        }
     }
 
     void ResetPlayerSkin()
@@ -199,5 +221,6 @@ public class ChangeSkinsDoor : MonoBehaviour
         jump.volume = 0.5f;
         skinsPanel.gameObject.SetActive(false);
         player.GetComponent<PlayerSelect>().ChangePlayerInMenu();
+        clip.Play();
     }
 }
