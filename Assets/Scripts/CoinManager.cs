@@ -42,8 +42,6 @@ public class CoinManager : MonoBehaviour
         levelCoinsCount += c;
         globalCoinsCount += c;
 
-        PlayerPrefs.SetInt("TotalCoins", globalCoinsCount);
-
         totalCoins.text = globalCoinsCount.ToString();
     }
 }

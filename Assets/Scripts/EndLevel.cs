@@ -52,6 +52,7 @@ public class EndLevel : MonoBehaviour
     IEnumerator LevelEndTransition()
     {
         yield return new WaitForSeconds(1.5f);
+        PlayerPrefs.SetInt("TotalCoins", CoinManager.globalCoinsCount);
         canvas.gameObject.SetActive(false);
         levelFinished.gameObject.SetActive(false);
         transition.SetActive(true);

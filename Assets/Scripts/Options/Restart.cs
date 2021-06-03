@@ -8,6 +8,9 @@ public class Restart : MonoBehaviour
     public Toggle toggle;
     public GameObject backButton;
     public GameObject restartButton;
+    public GameObject restartScreen;
+    public GameObject startScreen;
+    public GameObject restartingText;
 
     void Start()
     {
@@ -30,6 +33,13 @@ public class Restart : MonoBehaviour
 
     public void RestartGame()
     {
+        restartScreen.SetActive(false);
+        restartingText.SetActive(true);
+        Invoke("DeletePlayerPrefs", 1f);
+    }
+
+    public void DeletePlayerPrefs()
+    {
         PlayerPrefs.DeleteKey("TotalCoins");
         PlayerPrefs.DeleteKey("UnlockWorld2");
         PlayerPrefs.DeleteKey("UnlockWorld3");
@@ -38,5 +48,7 @@ public class Restart : MonoBehaviour
         PlayerPrefs.DeleteKey("PinkManBought");
         PlayerPrefs.DeleteKey("VirtualGuyBought");
         PlayerPrefs.DeleteKey("PlayerSelected");
+        restartingText.SetActive(false);
+        startScreen.SetActive(true);
     }
 }

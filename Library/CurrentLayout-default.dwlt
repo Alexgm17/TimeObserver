@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 471}
-  m_MaxSize: {x: 14001, y: 14021}
+  m_MinSize: {x: 678, y: 471}
+  m_MaxSize: {x: 14000, y: 14021}
   vertical: 0
-  controlID: 1853
+  controlID: 3148
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 471}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 1891
+  controlID: 3149
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 1892
+  controlID: 3150
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -398,9 +398,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 240d0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 36fbffff14490000
+      m_ExpandedIDs: f6e2ffff40fbffff9c4c01003a4d0100de4e0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 16762
+  m_LastSelectedObjectID: -7476
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1474,21 +1474,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/Options
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/Options
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\time-observer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 1338}
-    m_SelectedIDs: 46580000
-    m_LastClickedID: 22598
+    m_SelectedIDs: 28590000
+    m_LastClickedID: 22824
     m_ExpandedIDs: 000000003458000036580000385800003a5800003c5800003e58000040580000425800004458000046580000485800004a5800004c5800004e58000050580000525800005458000056580000585800005a5800005c5800005e580000605800006258000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
