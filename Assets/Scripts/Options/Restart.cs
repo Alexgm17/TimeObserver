@@ -48,6 +48,9 @@ public class Restart : MonoBehaviour
         PlayerPrefs.DeleteKey("PinkManBought");
         PlayerPrefs.DeleteKey("VirtualGuyBought");
         PlayerPrefs.DeleteKey("PlayerSelected");
+        PlayerPrefs.DeleteKey("World1Level4Message");
+        PlayerPrefs.DeleteKey("World2Level1Message");
+        PlayerPrefs.DeleteKey("World3Level1Message");
         restartingText.SetActive(false);
         startScreen.SetActive(true);
     }
